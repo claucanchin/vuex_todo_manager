@@ -25,12 +25,13 @@ const actions = {
       }
     );
 
-    commit();
+    commit("newTodo", response.data);
   }
 };
 
 const mutations = {
-  setTodos: (state, todos) => (state.todos = todos)
+  setTodos: (state, todos) => (state.todos = todos),
+  newTodo: (state, todo) => state.todos.unshift(todo)
 };
 
 export default {
