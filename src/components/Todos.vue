@@ -33,12 +33,12 @@ export default {
   methods: {
     ...mapActions(["fetchTodos", "deleteTodo", "updateTodo"]),
     onDblClick(todo) {
-      const updTodo = {
+      const updatedTodo = {
         id: todo.id,
         title: todo.title,
         completed: !todo.completed
       };
-      this.updateTodo(updTodo);
+      this.updateTodo(updatedTodo);
     }
   },
   computed: mapGetters(["allTodos"]),
